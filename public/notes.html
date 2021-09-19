@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>one body</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script defer src="/__/firebase/8.3.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.3.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <script defer src="/__/firebase/8.3.1/firebase-auth.js"></script>
+  </head>
+  <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <img src="https://library.kissclipart.com/20180929/iue/kissclipart-caduceus-medicine-clipart-staff-of-hermes-health-c-2ae8964c0951a138.png" height="100" width="100">
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="home.html">
+            home
+          </a>
+
+          <a class="navbar-item" href="about.html">
+            about one body
+          </a>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-info" href="trackHealth.html">
+                <strong>track health</strong>
+              </a>
+              <a class="button is-light" onclick="signOut()">
+                log out
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <h1 class="title">your health notes</h1>
+    <div class="tilesC">
+      <div class="tileC info">
+        <h3 class="is-family-sans-serif has-text-weight-bold	">left shoulder pain when playing baseball</h3>
+      </div>
+      <div class="tileC info">
+        <h3 class="is-family-sans-serif has-text-weight-bold	">did pt 3 times a week this week, and the shoulder pain is getting better</h3>
+      </div>
+      <div class="tileC info">
+        <h3 class="is-family-sans-serif has-text-weight-bold	">had a migrane today, and had aura too</h3>
+      </div>
+      <div class="tileC info">
+        <h3 class="is-family-sans-serif has-text-weight-bold">some back pain after helping jenny move in</h3>
+      </div>
+    </div>
+    <div class="center">
+        <a class="button is-info" href="home.html">view your health dashboard</a>
+    </div>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

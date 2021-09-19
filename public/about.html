@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>one body</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script defer src="/__/firebase/8.3.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.3.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <script defer src="/__/firebase/8.3.1/firebase-auth.js"></script>
+  </head>
+  <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <img src="https://library.kissclipart.com/20180929/iue/kissclipart-caduceus-medicine-clipart-staff-of-hermes-health-c-2ae8964c0951a138.png" height="100" width="100">
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="home.html">
+            home
+          </a>
+
+          <a class="navbar-item" href="about.html">
+            about one body
+          </a>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-info" href="trackHealth.html">
+                <strong>track health</strong>
+              </a>
+              <a class="button is-light" onclick="signOut()">
+                log out
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="tracker-form">
+        <h1 class="title">about one body</h1>
+        <h3>
+            One Body is a health-tracking web application that ensures that you are in check with your body. With its health dashboard, One Body gives users the opportunity to see trends in their health. This is extremely important for when one visits their doctor, to make sure that nothing is slipping through the cracks or forgotten. By being more in tune with how one's body is doing every day, it is easier to identify problem areas and see progress as changes are made to address them. One Body is the start of your health-tracking journey, to preserve the one body you have for life.
+        </h3>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>one body</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script defer src="/__/firebase/8.3.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.3.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <script defer src="/__/firebase/8.3.1/firebase-auth.js"></script>
+  </head>
+  <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <img src="https://library.kissclipart.com/20180929/iue/kissclipart-caduceus-medicine-clipart-staff-of-hermes-health-c-2ae8964c0951a138.png" height="100" width="100">
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="home.html">
+            home
+          </a>
+
+          <a class="navbar-item" href="about.html">
+            about one body
+          </a>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-info">
+                <strong>track health</strong>
+              </a>
+              <a class="button is-light" href="trackHealth.html" onclick="signOut()">
+                log out
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="tracker-form">
+      <h1 class="title">health tracker form</h1>
+      <div class="field">
+        <label class="label">date</label>
+        <div class="control">
+          <input class="input" type="date" placeholder="date" id="date">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">day rating (1 worst -> 10 best)</label>
+        <div class="control">
+          <input class="input" type="number" placeholder="rate your day" id="day">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">how many hours of sleep did you get?</label>
+        <div class="control">
+          <input class="input" type="number" placeholder="hours of sleep"  id="sleephours">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">sleep quality rating (1 worst -> 10 best)</label>
+        <div class="control">
+          <input class="input" type="number" placeholder="rate your sleep quality" id="sleepquality">
+        </div>
+      </div>
+      <h2 class="subtitle">mental health</h2>
+      <div class="field">
+        <label class="label">stress rating (1 none -> 10 lots)</label>
+        <div class="control">
+          <input class="input is-info" type="number" placeholder="rate your stress" id="stress">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">happiness rating (1 none -> 10 lots)</label>
+        <div class="control">
+          <input class="input is-info" type="number" placeholder="rate your happiness" id="happiness">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">mental health rating (1 worst -> 10 best)</label>
+        <div class="control">
+          <input class="input is-info" type="number" placeholder="rate your mental health" id="mental">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">overall mood</label>
+        <div class="control">
+          <div class="select is-info">
+            <select id="mood">
+              <option>happy</option>
+              <option>stressed</option>
+              <option>sad</option>
+              <option>nuetral</option>
+              <option>frustrated</option>
+              <option>annoyed</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">notes on your mental health</label>
+        <div class="control">
+          <textarea class="textarea is-info" placeholder="mental health notes" id="mentalnotes"></textarea>
+        </div>
+      </div>
+      <h2 class="subtitle">physical health</h2>
+      <div class="field">
+        <label class="label">physical pain rating (1 none -> 10 lots)</label>
+        <div class="control">
+          <input class="input is-primary" type="number" placeholder="rate your physical pain" id="pain">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">energy level rating (1 none -> 10 lots)</label>
+        <div class="control">
+          <input class="input is-primary" type="number" placeholder="rate your energy level" id="energy">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">physical health rating (1 worst -> 10 best)</label>
+        <div class="control">
+          <input class="input is-primary" type="number" placeholder="rate your physical health" id="physical">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">notes on your physical health</label>
+        <div class="control">
+          <textarea class="textarea is-primary" placeholder="physical health notes" id="physicalnotes"></textarea>
+        </div>
+      </div>
+      <div class="control">
+        <button class="button is-info" onclick="trackData()">submit</button>
+      </div>
+    </div>
+    <script src="js/trackHealth.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

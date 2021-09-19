@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>one body</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script defer src="/__/firebase/8.3.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.3.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <script defer src="/__/firebase/8.3.1/firebase-auth.js"></script>
+  </head>
+  <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <img src="https://library.kissclipart.com/20180929/iue/kissclipart-caduceus-medicine-clipart-staff-of-hermes-health-c-2ae8964c0951a138.png" height="100" width="100">
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="home.html">
+            home
+          </a>
+
+          <a class="navbar-item" href="about.html">
+            about one body
+          </a>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-info" href="trackHealth.html">
+                <strong>track health</strong>
+              </a>
+              <a class="button is-light" onclick="signOut()">
+                log out
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <h1 class="title">your health dashboard</h1>
+    <div class="columns">
+      <div class="column">
+        <div id="chart_div_rating" style="height: 300px;"></div>
+        <div id="chart_div_emotions" style="height: 300px;"></div>
+      </div>
+      <div class="column">
+        <div class="tilesC">
+          <div class="tileC warning">
+            <h3 class="is-family-sans-serif has-text-weight-bold	">average of </h3>
+            <div class="numberC" id="avghours">...</div>
+            <h3 class="is-family-sans-serif has-text-weight-bold	">hours of sleep</h3>
+          </div>
+          <div class="tileC good">
+            <h3 class="is-family-sans-serif has-text-weight-bold	">average rating of </h3>
+            <div class="numberC" id="avgquality">...</div>
+            <h3 class="is-family-sans-serif has-text-weight-bold	">for sleep quality</h3>
+          </div>
+          <div class="tileC good">
+            <h3 class="is-family-sans-serif has-text-weight-bold	">average rating of</h3>
+            <div class="numberC" id="avgenergy">...</div>
+            <h3 class="is-family-sans-serif has-text-weight-bold	">for engery level</h3>
+          </div>
+          <div class="tileC danger">
+            <h3 class="is-family-sans-serif has-text-weight-bold">average rating of</h3>
+            <div class="numberC" id="avgpain">...</div>
+            <h3 class="is-family-sans-serif has-text-weight-bold	">for pain</h3>
+          </div>
+        </div>
+        <div class="center">
+           <a class="button is-info" href="notes.html">view your health notes</a>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/home.js"></script>
+  </body>
+</html>
