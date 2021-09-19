@@ -1,6 +1,5 @@
 console.log("running")
 let googleUserId;
-let itemsUploaded = 0;
 
 window.onload = event => {
     // retains user state between html pages.
@@ -20,8 +19,6 @@ window.onload = event => {
             window.location = 'index.html';
         };
     });
-    
-    client.picker(options).open();
 };
     
 const trackData = () => {
